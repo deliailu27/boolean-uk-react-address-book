@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useParams } from "react-router-dom";
 import ContactsList from "./components/ContactsList";
 import ContactsAdd from "./components/ContactsAdd";
 import ContactsView from "./components/ContactsView";
@@ -40,6 +40,7 @@ export default function App() {
               <ContactsAdd contacts={contacts} setContacts={setContacts} />
             }
           />
+          <Route path="/contacts/:id" element={<ContactsView />} />
 
           {/* TODO: Add routes here  */}
         </Routes>

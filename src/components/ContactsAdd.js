@@ -7,11 +7,13 @@ function ContactsAdd(props) {
   // state
   const { setContacts, contacts } = props;
   const [newContact, setNewContact] = useState({
+    id: "",
     firstName: "",
     lastName: "",
     street: "",
     city: "",
   });
+  const navigate = useNavigate();
 
   //TODO: Implement controlled form
   //send POST to json server on form submit
@@ -20,15 +22,17 @@ function ContactsAdd(props) {
     event.preventDefault();
     console.log("submit event:", event);
     const updateContacts = [...contacts];
+
     updateContacts.push(newContact);
     setContacts(updateContacts);
 
-    const data = JSON.stringify(contacts);
+    const data = JSON.stringify(newContact);
     let xhr = new XMLHttpRequest();
     const url = "http://localhost:4000/contacts";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(data);
+    navigate("/");
   }
 
   function handleChange(event) {
