@@ -6,9 +6,9 @@
       "lastName": "Carmack",
       "street": "10 Keen Street",
       "city": "London",
-      "email":"JohnCarmack@example.com",
-      "linkedIn":"https://www.linkedin.com/",
-      "twitter":"https://www.facebook.com/"
+      "email": "JohnCarmack@example.com",
+      "linkedIn": "https://www.linkedin.com/",
+      "twitter": "https://www.facebook.com/"
     },
     {
       "id": 2,
@@ -16,9 +16,10 @@
       "lastName": "Hopper",
       "street": "32 Deebug Road",
       "city": "London",
-      "email":"GraceHopper@example.com",
-      "linkedIn":"https://www.linkedin.com/",
-      "twitter":"https://www.facebook.com/"
+      "email": "GraceHopper@example.com",
+      "linkedIn": "https://www.linkedin.com/",
+      "twitter": "https://www.facebook.com/"
     }
+  
   ]
 }
