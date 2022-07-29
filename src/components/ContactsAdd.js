@@ -12,6 +12,9 @@ function ContactsAdd(props) {
     lastName: "",
     street: "",
     city: "",
+    email: "",
+    linkedIn: "",
+    twitter: "",
   });
   const navigate = useNavigate();
 
@@ -62,6 +65,32 @@ function ContactsAdd(props) {
       <input
         id="lastName"
         name="lastName"
+        type="text"
+        required
+        onChange={handleChange}
+      />
+      <label htmlFor="email">Email:</label>
+      <input
+        id="email"
+        name="email"
+        type="text"
+        required
+        onChange={handleChange}
+      />
+
+      <label htmlFor="linkedIn">LinkedIn:</label>
+      <input
+        id="linkedIn"
+        name="linkedIn"
+        type="text"
+        required
+        onChange={handleChange}
+      />
+
+      <label htmlFor="twitter">Twitter:</label>
+      <input
+        id="twitter"
+        name="twitter"
         type="text"
         required
         onChange={handleChange}

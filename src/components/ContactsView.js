@@ -30,6 +30,11 @@ function ContactsView(props) {
       <p>
         {contact.street} {contact.city}
       </p>
+      <p>Email:{contact.email}</p>
+      <p>
+        <a href={`${contact.linkedIn}`}>linkedIn</a>
+      </p>
+      <a href={`${contact.twitter}`}>Twitter</a>
     </div>
   );
 }
