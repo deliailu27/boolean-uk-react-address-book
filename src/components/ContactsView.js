@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 function ContactsView(props) {
   const [contact, setContact] = useState(null);
@@ -10,6 +10,15 @@ function ContactsView(props) {
 
   const location = useLocation();
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  const deleteURL = `http://localhost:4000/contacts/${id}`;
+
+  function DeletContact() {
+    const response = fetch(deleteURL, { method: "DELETE" });
+    navigate("/");
+    return response.json();
+  }
 
   useEffect(() => {
     if (location.state) {
@@ -34,7 +43,10 @@ function ContactsView(props) {
       <p>
         <a href={`${contact.linkedIn}`}>linkedIn</a>
       </p>
-      <a href={`${contact.twitter}`}>Twitter</a>
+      <p>
+        <a href={`${contact.twitter}`}>Twitter</a>
+      </p>
+      <button onClick={DeletContact}>delete</button>
     </div>
   );
 }

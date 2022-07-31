@@ -1,16 +1,6 @@
 {
   "contacts": [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Carmack",
-      "street": "10 Keen Street",
-      "city": "London",
-      "email": "JohnCarmack@example.com",
-      "linkedIn": "https://www.linkedin.com/",
-      "twitter": "https://www.facebook.com/"
-    },
-    {
       "id": 2,
       "firstName": "Grace",
       "lastName": "Hopper",
@@ -19,7 +9,16 @@
       "email": "GraceHopper@example.com",
       "linkedIn": "https://www.linkedin.com/",
       "twitter": "https://www.facebook.com/"
+    },
+    {
+      "id": 3,
+      "firstName": "Delia",
+      "lastName": "Liu",
+      "street": "5 Kensington mansions",
+      "city": "London",
+      "email": "delialiu27@gmail.com",
+      "linkedIn": "https://www.linkedin.com/in/delia-l-164abb138/",
+      "twitter": "https://www.facebook.com/"
     }
-  
   ]
 }
